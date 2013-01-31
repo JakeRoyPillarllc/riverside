@@ -1,0 +1,44 @@
+!function ($) {
+  $(function(){
+
+	 // $("ul.left-tabs a").hover(function(){
+	 // 			var t = $(this).attr('data-target');
+	 // 			$(".thumb img").css("opacity","0.6");
+	 // 			$("#" + t).css("opacity","1.0");
+	 // 		});
+	 // 		 $("ul.left-tabs a").hover(function(){
+	 // 			var t = $(this).attr('data-target');
+	 // 			$(".thumb img").css("opacity","0.6");
+	 // 			$("#" + t).css("opacity","1.0");
+	 // 		});
+
+    $(".thumb1").hover(function(){ $(this).css("opacity","1.0"); $(".pro1").css("color","white"); },
+                       function(){ $(this).css("opacity", "0.6"); $(".pro1").css("color","grey"); });
+	  $(".thumb2").hover(function(){ $(this).css("opacity","1.0"); $(".pro2").css("color","white"); },
+				         function(){ $(this).css("opacity", "0.6"); $(".pro2").css("color","grey"); });
+	  $(".thumb3").hover(function(){ $(this).css("opacity","1.0"); $(".pro3").css("color","white"); },
+						 function(){ $(this).css("opacity", "0.6"); $(".pro3").css("color","grey"); });
+    $(".thumb4").hover(function(){ $(this).css("opacity","1.0"); $(".pro4").css("color","white"); },
+				         function(){ $(this).css("opacity", "0.6"); $(".pro4").css("color","grey"); });
+    $(".thumb5").hover(function(){ $(this).css("opacity","1.0"); $(".pro5").css("color","white"); },
+                       function(){ $(this).css("opacity", "0.6"); $(".pro5").css("color","grey"); });
+    $(".thumb6").hover(function(){ $(this).css("opacity","1.0"); $(".pro6").css("color","white"); },
+                       function(){ $(this).css("opacity", "0.6"); $(".pro6").css("color","grey"); });
+
+    $(".pro1").hover(function(){ $(this).css("color", "white"); $(".thumb1").css("opacity", "1.0"); }, 
+                     function(){ $(this).css("color", "grey"); $(".thumb1").css("opacity","0.6"); });
+    $(".pro2").hover(function(){ $(this).css("color", "white"); $(".thumb2").css("opacity", "1.0"); }, 
+                     function(){ $(this).css("color", "grey"); $(".thumb2").css("opacity","0.6"); });
+    $(".pro3").hover(function(){ $(this).css("color", "white"); $(".thumb3").css("opacity", "1.0"); }, 
+                     function(){ $(this).css("color", "grey"); $(".thumb3").css("opacity","0.6"); });
+    $(".pro4").hover(function(){ $(this).css("color", "white"); $(".thumb4").css("opacity", "1.0"); }, 
+                     function(){ $(this).css("color", "grey"); $(".thumb4").css("opacity","0.6"); });
+    $(".pro5").hover(function(){ $(this).css("color", "white"); $(".thumb5").css("opacity", "1.0"); }, 
+                     function(){ $(this).css("color", "grey"); $(".thumb5").css("opacity","0.6"); });
+    $(".pro6").hover(function(){ $(this).css("color", "white"); $(".thumb6").css("opacity", "1.0"); }, 
+                     function(){ $(this).css("color", "grey"); $(".thumb6").css("opacity","0.6"); });
+
+    
+
+  });
+}(window.jQuery)

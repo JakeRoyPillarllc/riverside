@@ -26,12 +26,15 @@
 }
 
 #project-infobar{
+  height:500px;
   width:250px;
   background:white; 
   position:absolute; 
   overflow:hidden;
   background-color: rgba(220, 220, 220, 0.7) !important;
   border-right:2px solid rgb(100,100,100);
+  padding: 50px;
+  z-index: 0;
 }
 
 .infobar{
@@ -62,6 +65,8 @@ body {
 .footer{
   height:40px;
   background-color:rgb(60, 60, 60);
+  z-index:5;
+  position:relative;
 }
 
 .footer-links{
@@ -74,12 +79,14 @@ body {
     background:transparent;
     font-size:14pt;
     text-decoration:none;
+    color:grey;
 }
 
 .footer-links a:hover {
     background:transparent;
     font-size:14pt;
     text-decoration:none;
+    color:white;
 }
 
 
@@ -215,10 +222,10 @@ nav{
 
 
 .carousel .carousel-control {
-	display: none;
+	display: none !important;
 }
 .carousel:hover .carousel-control {
-	display: inherit;
+	display: inherit !important;
 }
 
 .carousel .item {

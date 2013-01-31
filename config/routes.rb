@@ -1,6 +1,11 @@
 Riverside::Application.routes.draw do
   resources :projects
-
+  
+  root :to => 'home#index'
+  match "/about" => "home#about"
+  match "/contact" => "home#contact"
+  match "/services" => "home#services"
+  
 
   #get "home/index"
 
@@ -53,7 +58,7 @@ Riverside::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  
 
   # See how all your routes lay out with "rake routes"
 

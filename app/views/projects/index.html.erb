@@ -1,31 +1,69 @@
-<h1>Listing projects</h1>
+<div class ="body" style="height:1000px;">
+    <div class="span4" style="margin-top: 130px;">
+	  <ul class="left-tabs">
+		<% @projects.each do |project| %>
+		<li><%=link_to "#{project.name.upcase}", project, class: "pro#{project.id}" %></li><br/>
+	   <% end %>	
+	  </ul>
+    </div>	
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Info</th>
-    <th>Completed</th>
-    <th>Publications</th>
-    <th>Architect</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="span9 pull-right right-thumbs" style="margin-top: 130px;">	
+	  <div class="row pull-right">
+		
+		<% @projects.each do |project| %>
+	      <div class="span3">
+		    <div class = "thumb">
+		      <%= link_to(image_tag("joshbell.jpg", class:"thumb#{project.id}"), project) %>
+		    </div>
+	      </div>
+	    <% end %>	
+	   
+	    <!-- <div class="span3">
+	  		  <div class = "thumb">
+	  		    <a href="/projects/project2.html"><img id="thumb2" class ="thumb2" src="/img/riverside/placeholder_thumb.png"></a>
+	  		  </div>
+	  	    </div>
+	  	  	<div class="span3">
+	  		  <div class = "thumb">
+	  		    <a href="/projects/project3.html"><img id="thumb3" class="thumb3" src="/img/riverside/placeholder_thumb.png"></a>
+	  		  </div>
+	  	    </div>
+	  	  </div>
+	  	
+	  	
+	  	<div class="row pull-right">
+	  	    <div class="span3">
+	  		  <div class = "thumb">
+	  		    <a href="/projects/project4.html"><img id="thumb4" class="thumb4" src="/img/riverside/placeholder_thumb.png"></a>
+	  		  </div>
+	  	    </div>
+	  	    <div class="span3">
+	  		  <div class = "thumb">
+	  		    <a href="/projects/project5.html"><img id="thumb5" class="thumb5" src="/img/riverside/placeholder_thumb.png"></a>
+	  		  </div>
+	  	    </div>
+	  	  	<div class="span3">
+	  		  <div class = "thumb">
+	  		    <a href="/projects/project6.html"><img id="thumb6" class="thumb6" src="/img/riverside/placeholder_thumb.png"></a>
+	  		  </div>
+	  	    </div>
+	  	  </div> -->
+	
+</div>
+	
+<% content_for(:head) do %>
+    <%= javascript_include_tag "selectedprojects.js.erb" %>
+<% end %>	
+	
+	
+	
+	
+</div>
 
-<% @projects.each do |project| %>
-  <tr>
-    <td><%= project.name %></td>
-    <td><%= project.info %></td>
-    <td><%= project.completed %></td>
-    <td><%= project.publications %></td>
-    <td><%= project.architect %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Project', new_project_path %>
+</div><!-- /.container -->
+
+
+<%= render "home/footer" %>
+
