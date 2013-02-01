@@ -32,7 +32,8 @@
 	<div class = "span3">
 		<% if admin? %>
 		  <%= link_to 'edit', edit_project_path(@project) %> &nbsp;&nbsp;
-		  <%= link_to 'delete', @project, :confirm => "Are you sure you want to delete this project? This project will be permanently deleted. You can not un-do this action.", :method => :delete %>
+		  <%= link_to 'delete', @project, :confirm => "Are you sure you want to delete this project? This project will be permanently deleted. You can not un-do this action.", :method => :delete %> &nbsp;&nbsp;
+		  <%= link_to 'new', new_project_path() %>
 		<% end %>
 	</div>
 	<div class = "span3" style="text-align:right; font-size:12pt;">
@@ -67,7 +68,10 @@
 	$(".exit").click(function(){
 		if (cnt%2 == 1)
 		  cnt++;
-        $("#project-infobar").animate({top: document.height}, 600);	
+        	$("#project-infobar").animate({top: document.height}, 600, function() {
+			 			    $("#project-infobar").css("display", "none");
+			 			  });
+
 	});
 	
 	
@@ -109,8 +113,3 @@
 });
   }(window.jQuery)
 </script>
-
-<% if admin? %>
-<%= link_to 'Edit Project', edit_project_path(@project) %> |
-<%= link_to 'Delete Project', @project, :confirm => "Are you sure?", :method => :delete %>
-<% end %>
