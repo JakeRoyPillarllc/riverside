@@ -49,7 +49,6 @@
   border-right:2px solid rgb(100,100,100);
 }
 body {
-  height:620px;
   color: #5a5a5a;
 }
 
@@ -60,6 +59,7 @@ body {
 
 .body{
 	background-color:black;
+	height:620px;
 }
 
 .footer{
@@ -72,14 +72,17 @@ body {
 .footer-links{
   color:white;
   padding-top:10px;
-  margin-left:10%;
 }
 
-.footer-links a {
+.footer-links .span3 a {
     background:transparent;
     font-size:14pt;
     text-decoration:none;
     color:grey;
+}
+
+.footer-links .span3{
+  text-align:center;
 }
 
 .footer-links a:hover {

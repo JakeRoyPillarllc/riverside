@@ -26,13 +26,30 @@
 
 <div class = "footer">
   <div class="footer-links">
-    <a id= "info" style="font-size:10pt;" href="#"> PROJECT INFO </a>
-	<span style="margin-left:50%;"><%= @project.name.upcase %></span>
-	<span style="margin-left:23%;"> 
+	<div class ="span3">
+		<a id= "info" style="font-size:10pt;" href="#"> PROJECT INFO </a>
+	</div>
+	<div class = "span3">
+		<% if admin? %>
+		  <%= link_to 'EDIT', edit_project_path(@project) %> &nbsp;&nbsp;
+		  <%= link_to 'DELETE', @project, :confirm => "Are you sure you want to delete this project? This project will be permanently deleted. You can not un-do this action.", :method => :delete %>
+		<% end %>
+	</div>
+	<div class = "span3" style="text-align:right; font-size:12pt;">
+	  <%= @project.name.upcase %>	
+	</div>
+	<div class = "span3 pull-right">
 		<a id="prev" href="#"> < </a>
 		   &nbsp;&nbsp;&nbsp;&nbsp;
-		<a id="next" href="#"> > </a> 
-	</span>
+		<a id="next" href="#"> > </a>
+	</div>
+    <!-- <a id= "info" style="font-size:10pt;" href="#"> PROJECT INFO </a>
+    	<span style="margin-left:50%;"><%= @project.name.upcase %></span>
+    	<span style="margin-left:23%;"> 
+    		<a id="prev" href="#"> < </a>
+    		   &nbsp;&nbsp;&nbsp;&nbsp;
+    		<a id="next" href="#"> > </a> 
+    	</span> -->
 	
    </div>
 </div>
