@@ -31,8 +31,8 @@
 	</div>
 	<div class = "span3">
 		<% if admin? %>
-		  <%= link_to 'EDIT', edit_project_path(@project) %> &nbsp;&nbsp;
-		  <%= link_to 'DELETE', @project, :confirm => "Are you sure you want to delete this project? This project will be permanently deleted. You can not un-do this action.", :method => :delete %>
+		  <%= link_to 'edit', edit_project_path(@project) %> &nbsp;&nbsp;
+		  <%= link_to 'delete', @project, :confirm => "Are you sure you want to delete this project? This project will be permanently deleted. You can not un-do this action.", :method => :delete %>
 		<% end %>
 	</div>
 	<div class = "span3" style="text-align:right; font-size:12pt;">

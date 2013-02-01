@@ -11,27 +11,35 @@
     </div>
   <% end %>
 
+<div class ="span3">
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :info %><br />
+    <%= f.label :info %>
     <%= f.text_area :info %>
   </div>
+</div>
+
+<div class ="span3">
   <div class="field">
-    <%= f.label :completed %><br />
+    <%= f.label :completed %>
     <%= f.text_field :completed %>
   </div>
   <div class="field">
-    <%= f.label :publications %><br />
+    <%= f.label :publications %>
     <%= f.text_field :publications %>
   </div>
   <div class="field">
-    <%= f.label :architect %><br />
+    <%= f.label :architect %>
     <%= f.text_field :architect %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <%= link_to 'Show Project', @project %> |
+  <%= link_to 'All Projects', projects_path %>
+</div>
+
 <% end %>

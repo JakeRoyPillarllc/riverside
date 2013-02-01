@@ -92,7 +92,9 @@ body {
     color:white;
 }
 
-
+.field{
+  color:white;
+}
 
 .thumb{
 	padding-bottom:20px;
@@ -114,6 +116,19 @@ ul a:hover {
 .thumb img{
 	opacity: 0.6;
 }
+
+
+.alert{
+  margin-bottom:0 !important;
+  padding-left: 40px !important;
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+.alert a:hover{
+  background:transparent;
+}
+
 
 .carousel{
   margin-bottom:0 !important;

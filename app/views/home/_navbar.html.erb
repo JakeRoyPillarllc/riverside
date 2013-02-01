@@ -19,6 +19,9 @@
                 <li class="pull-right"><%= link_to "SELECTED PROJECTS", projects_path %></li>
                 <li class="pull-right"><%= link_to "SERVICES", "/services" %></li>
                 <li class="pull-right"><%= link_to "CONTACT", "/contact" %></li>
+                <% if admin? %>
+                  <li class="pull-right" style="color:white;"><%= link_to "log out", "/logout" %></li>
+                <% end %>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
