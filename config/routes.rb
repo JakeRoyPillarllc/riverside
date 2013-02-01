@@ -1,11 +1,17 @@
 Riverside::Application.routes.draw do
   resources :projects
+  resources :sessions
   
   root :to => 'home#index'
+  
   match "/about" => "home#about"
   match "/contact" => "home#contact"
   match "/services" => "home#services"
   
+  match "/login" => "sessions#new"
+  match "/logout" => "sessions#destroy"
+  
+
 
   #get "home/index"
 
