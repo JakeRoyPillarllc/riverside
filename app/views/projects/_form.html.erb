@@ -1,4 +1,4 @@
-<%= form_for(@project) do |f| %>
+<%= form_for(@project, :html => {:multipart => true}) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -19,9 +19,6 @@
     <%= f.label :info %>
     <%= f.text_area :info %>
   </div>
-</div>
-
-<div class ="span3">
   <div class="field">
     <%= f.label :completed %>
     <%= f.text_field :completed %>
@@ -39,6 +36,34 @@
   </div>
   <%= link_to 'Show Project', @project %> |
   <%= link_to 'All Projects', projects_path %>
+</div>
+
+<div class ="span3">
+	<div class ="photouploads" style="color:white;">
+		<%= f.fields_for :project_photos do |builder| %>
+	      <% if builder.object.new_record? %>
+		    <%= builder.label :caption, "Image Caption" %>
+		    <%= builder.text_field :caption %>
+	        <%= builder.label :photo, "Image File" %>
+		    <%= builder.file_field :photo %>
+		     <br/> <br/> <br/> <br/>
+		  <% end %>
+		<% end %>
+	  </div>
+</div>
+
+<div class="span3">
+	<div id = "projectphotothumbs" style="color:white;">
+	 <h3> Project photos</h3>
+	  <% @project.project_photos.each do |pp|%>
+	    <% if pp.photo.exists? %>
+	      <%= image_tag(pp.photo.url, style: "max-height:170px;")%><br/>
+	      <%= link_to("Delete", {controller: "projects", action: "delete_photo", photo: pp.id}, class: "btn btn mini", confirm: "Are you sure you want to delete this photo?") %>
+	      <%= pp.caption %>
+	      <br/><br/><br/>
+	    <% end %>
+	  <% end%>
+	</div>
 </div>
 
 <% end %>

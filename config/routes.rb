@@ -11,6 +11,8 @@ Riverside::Application.routes.draw do
   match "/login" => "sessions#new"
   match "/logout" => "sessions#destroy"
   
+  match "projects/:id/delete_photo" => "projects#delete_photo"
+  
 
 
   #get "home/index"

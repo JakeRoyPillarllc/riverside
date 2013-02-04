@@ -1,15 +1,15 @@
 <div id = "everything" style="overflow:hidden;">
 <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
-    <div class="item active">
-     <%=image_tag "joshbell.jpg"%>
-    </div>
-    <div class="item">
-     <%=image_tag "joshbell.jpg"%>
-    </div>
-    <div class="item">
-      <%=image_tag "joshbell.jpg"%>
-     </div>
+	<% @project.project_photos.each_with_index do |pp, index| %>
+	  <% if index == 0 %>
+	    <div class = "item active">
+	  <% else %>
+	    <div class = "item">
+	  <% end %>
+		<%= image_tag(pp.photo.url, :title => pp.caption)%>
+		</div>
+	<% end %>
     </div>
   </div>
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>

@@ -27,7 +27,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new.json
   def new
     @project = Project.new
-
+    5.times {@project.project_photos.build}
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @project }
@@ -37,6 +37,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1/edit
   def edit
     @project = Project.find(params[:id])
+    5.times {@project.project_photos.build}
   end
 
   # POST /projects
@@ -69,6 +70,14 @@ class ProjectsController < ApplicationController
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
+  end
+  
+  def delete_photo
+    @project = Project.find(params[:id])
+    @photo = ProjectPhoto.find(params[:photo])
+    @photo.destroy
+    @project.update_attributes(params[:project])
+    redirect_to edit_project_path, notice: 'Photo successfully deleted from the project.'
   end
 
   # DELETE /projects/1
