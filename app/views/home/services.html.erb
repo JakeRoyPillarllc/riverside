@@ -1,6 +1,6 @@
 <%= image_tag @site.services_photo.url, class: "background-image" %>
 
 <div class ="infobar">
-<%= @site.services %>
+<%= @site.services.html_safe %>
 </div>
 
