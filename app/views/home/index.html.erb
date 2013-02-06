@@ -1,5 +1,137 @@
-<div style="text-align:center; height:620px;"> 
-<%= image_tag "joshbell.jpg", style: "max-width:100%; max-height:100%"%>
-</div>
-<%= render "footer" %>
+   
+<%= image_tag "joshbell.jpg", class: "background-image" %>
+
+   <!-- <div class = "footer">
+   	<div style="padding-top:10px;">
+   		<p style="text-align:center; color:white;">
+   			GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+   		</p>
+   	</div> -->
+
+
+<script>
+
+$('.background-image').load(function(){
+    // var $this = $(this),
+    //     img_width = $this.width();
+    //     img_height = $this.height();
+    //     $(".container.everything").css("width", img_width);
+    //    
+	 // setContainerHeightToWindowHeight();
+	  	  setContentHeightToImageHeight();
+	  	  setContainerWidthToImageWidth();
+  
+});
+// 
+// 
+// 
+// 
+// 
+// var h = windowHeight();
+// var w = windowWidth();
+// 
+// $(window).resize(function(){
+// 
+//     var nh = windowHeight();
+//     var nw = windowWidth();
+//  
+//     if ((nw > w) || (nh > h)) {  // if getting bigger
+//     }
+//     if ((nw < w) || (nh < h)){ //if getting smaller
+// 	  if (nw < $('.container.everything').width()){
+// 		$(".container.everything").$('.background-image').height());
+// 		$(".content").css("height", $('.background-image').height()-120);
+//      	}
+//       if (nh < $(".container.everything").height()){
+// 	     $(".content").css("height", windowHeight()-120);
+// 	     $(".container.everything").css("width", $('.background-image').width());
+//        }
+// 	  	// img_width = $('.background-image').width();
+// 	  	// 	    $(".container.everything").css("width", img_width);
+//     }
+//     h = nh; 
+//     w = nw; // update h and w;
+// });
+
+//$(window).resize(function() {
+//	$('.background-image').load(function(){
+	   // var $this = $(this),
+	    
+
+//	});
+//});
+//$(window).load(function () {
+	
+	 // 
+	 // setContainerHeightToWindowHeight();
+	 // setContentHeightToImageHeight();
+	 // setContainerWidthToImageWidth();
+	// 
+	// 
+	//     
+	
+	// if ($(".background-image").width() > w){
+	// 	var w2 = $(".background-image").width();
+	// 	$(".container.everything").css("width", w2);
+	// }
+	
+	 // console.log("hi");
+	 //      var h = $(".background-image").height();
+	 //      console.log(h);
+	 //      $(".content").css("height", h-115);
+	 //      var w = $(".background-image").width();
+	 //            console.log(w);
+	 //            $(".container.everything").css("width", w)
+	 
+   // });
+
+    function setContainerHeightToWindowHeight(){
+	  	var h = windowHeight();
+	    $(".container.everything").css("height", h);
+    }
+    function setContentHeightToImageHeight(){
+		var h = windowHeight();
+		$(".content").css("height", h-120);
+		var h2 = $(".background-image").height();
+		$(".content").css("height", h2);
+    }
+    function setContainerWidthToImageWidth(){
+		var w2 = $(".background-image").width();
+		$(".container.everything").css("width", w2);
+   }
+
+
+	function windowHeight() {
+	  var myHeight = 0;
+	  if( typeof( window.innerWidth ) == 'number' ) {
+	    //Non-IE
+	    myHeight = window.innerHeight;
+	  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+	    //IE 6+ in 'standards compliant mode'
+	    myHeight = document.documentElement.clientHeight;
+	  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+	    //IE 4 compatible
+	    myHeight = document.body.clientHeight;
+	  }
+	  return myHeight;
+	}
+	
+	function windowWidth() {
+	  var myWidth = 0;
+	  if( typeof( window.innerWidth ) == 'number' ) {
+	    //Non-IE
+	    myWidth = window.innerWidth;
+	  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+	    //IE 6+ in 'standards compliant mode'
+	    myWidth = document.documentElement.clientWidth;
+	  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+	    //IE 4 compatible
+	    myWidth = document.body.clientWidth;
+	  }
+	  return myWidth;
+	}
+	
+	
+</script>
+
    

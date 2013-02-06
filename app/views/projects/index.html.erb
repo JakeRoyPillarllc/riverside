@@ -1,5 +1,10 @@
-<div class ="body" style="height:1000px;">
-    <div class="span4" style="margin-top: 130px;">
+<div class ="container" style="min-height:500px;">
+	
+<div class="row" style="height:50px;">
+</div>
+
+<div class="row">
+    <div class="span4" style="">
 	  <ul class="left-tabs">
 		<% @projects.each do |project| %>
 		<li><%=link_to "#{project.name.upcase}", project, class: "pro#{project.id}" %></li><br/>
@@ -7,16 +12,21 @@
 	  </ul>
     </div>	
 
-  <div class="span9 pull-right right-thumbs" style="margin-top: 130px;">	
+    <div class="span8 pull-right right-thumbs" style="">	
 	  <div class="row pull-right">
 		
 		<% @projects.each do |project| %>
-	      <div class="span3">
-		    <div class = "thumb">
-		      <%= link_to(image_tag("joshbell.jpg", class:"thumb#{project.id}"), project) %>
+	      <% if project.project_photos.count > 0 %>
+		    <div class = "thumb pull-left">
+		      <%= link_to(image_tag( project.project_photos.first.photo.url(:thumb), class:"thumb#{project.id}"), project) %>
 		    </div>
-	      </div>
-	    <% end %>	
+	      <% end %>
+	    <% end %>
+	  </div>
+	</div>	
+</div>
+
+</div>
 	   
 	    <!-- <div class="span3">
 	  		  <div class = "thumb">
@@ -49,19 +59,5 @@
 	  	    </div>
 	  	  </div> -->
 	
-</div>
-	
 
-	
-	
-	
-	
-</div>
-
-
-
-</div><!-- /.container -->
-
-
-<%= render "home/footer" %>
 

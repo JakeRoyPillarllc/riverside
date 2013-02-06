@@ -12,54 +12,72 @@
  *= require_tree .
  */
 
+
 *{
   font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
 }
 
+html{
+  height:100%;
+}
+
+.container.everything{
+  height:100%;
+  position:relative;
+  //min-width:800px;
+}
+
+.background-image{
+  max-width:100%; 
+  max-height:100%
+}
 
 #logo{
   background-color:rgb(60, 60, 60) !important;
   float:left; 
-  font-size:28pt; 
+  font-size:24pt; 
   text-decoration:none;
   color:white;
 }
 
 #project-infobar{
-  height:500px;
+  height:100%;
+  top:80px;
   width:250px;
   background:white; 
   position:absolute; 
   overflow:hidden;
   background-color: rgba(220, 220, 220, 0.7) !important;
-  border-right:2px solid rgb(100,100,100);
+  //border-right:2px solid rgb(100,100,100);
   padding: 50px;
   z-index: 0;
 }
 
 .infobar{
   background-color: rgba(220, 220, 220, 0.7) !important;
-  height:520px;
-  width:350px;
-  top:100px;
-  left:0px !important;
+  width:20%;
+  top:80px;
+  height: 100%;
   position:absolute !important;
   text-color: black;
   padding: 50px !important;
+  overflow:auto;
   //border-right:2px solid rgb(100,100,100);
 }
 body {
-  color: #5a5a5a;
+  background-color: rgb(120,120,120) !important;
+  height: 100%;
 }
 
 .header{
-  height:100px;
+  height:80px;
   background-color:rgb(60, 60, 60);
 }
 
-.body{
+.content{
 	background-color:black;
-	height:620px;
+//	min-width:800px;
+	min-height:600px;
 }
 
 .footer{
@@ -67,6 +85,7 @@ body {
   background-color:rgb(60, 60, 60);
   z-index:5;
   position:relative;
+  width:100%;
 }
 
 .footer-links{
@@ -98,6 +117,9 @@ body {
 
 .thumb{
 	padding-bottom:20px;
+	padding-right: 20px;
+	max-height:40%;
+	max-width:30%;
 }
 
 ul {
@@ -150,20 +172,25 @@ ul a:hover {
 	color:black;
 
 }
+
+.navbar .nav{
+float:right !important;
+}
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  margin-top: 25px;
+.nav .pull-right {
+
 }
 .navbar-wrapper .navbar {
-  width:100% !important;
+}
+
+.navbar-inverse{
+  padding-top: 15px !important;
+  padding-left: 20px !important;
+
 }
 
 nav{
@@ -181,7 +208,7 @@ nav{
 .navbar-inner{
   -webkit-box-shadow:none !important;
   box-shadow:none !important;
-  margin-top:20px !important;
+  padding-top:20px !important;
 }
 .navbar-inverse .nav .active > a {
 	background:transparent !important;
@@ -200,7 +227,7 @@ nav{
 /* Navbar links: increase padding for taller navbar */
 .navbar .nav > li > a {
   padding: 15px 20px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* Offset the responsive button for proper vertical alignment */
@@ -279,15 +306,14 @@ nav{
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (max-width: 1050px) {
 
+@media (max-width: 1050px) {
   .container.navbar-wrapper {
     margin-bottom: 0;
     width: auto;
   }
   .navbar-inner {
     border-radius: 0;
-    margin: -20px 0;
   }
 
 .nav-collapse collapse{
@@ -318,10 +344,9 @@ nav{
 }
 
 
-@media (max-width: 767px) {
+@media (max-width:600px) {
 
   .navbar-inner {
-    margin: -20px;
   }
 
   .carousel {
@@ -363,3 +388,4 @@ nav{
   }
 
 }
+
