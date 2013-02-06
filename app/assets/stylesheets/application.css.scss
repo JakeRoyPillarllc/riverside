@@ -32,12 +32,16 @@ html{
   max-height:100%
 }
 
-#logo{
+#logolink{
   background-color:rgb(60, 60, 60) !important;
   float:left; 
   font-size:24pt; 
   text-decoration:none;
   color:white;
+}
+
+#logoimg{
+  max-width:300px;
 }
 
 #project-infobar{
@@ -139,6 +143,11 @@ ul a:hover {
 	opacity: 0.6;
 }
 
+.no-bg-link:hover{
+  background:transparent;
+  text-decoration:none;
+}
+
 
 .alert{
   margin-bottom:0 !important;
@@ -222,6 +231,8 @@ nav{
 .navbar .brand {
   padding: 14px 30px 16px; /* Increase vertical padding to match navbar links */
   color:white !important;
+  margin-top: -25px;
+  cursor: pointer;
 }
 
 /* Navbar links: increase padding for taller navbar */

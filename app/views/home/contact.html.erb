@@ -1,20 +1,20 @@
 
-<%= image_tag "joshbell.jpg", class: "background-image" %>
+<%= image_tag @site.contact_photo.url, class: "background-image" %>
 
 
 <div class ="infobar">
 
-<h3>RIVERSIDE BUILDERS</h3>
+<%= image_tag "logoblack.png", style: "max-width:250px; margin-left:-10px;" %>
 
 <p>Elliot Berkowitz, President<br/>
-900 Broadway, Ste 802<br/>
-New York, NY 10003</p>
+<%= @site.address1 %><br/>
+<%= @site.address2 %></p>
 <br/>
-<p>T: 212.614.3040<br/>
-F: 212.409.8533</p>
+<p>T: <%= @site.telephone %><br/>
+F: <%= @site.fax %></p>
 <br/>
-<p><a href="mailto:info@rbnewyork.com" target="_blank" >info@rbnewyork.com</a></p>
-<p><a href="http://goo.gl/maps/suG7u" target="_blank" >Map</a></p>
+<p><%= link_to(@site.email, "mailto:#{@site.email}", class: "no-bg-link", target: "_blank")%></p>
+<p><%= link_to("Map", @site.map_url, class: "no-bg-link", target: "_blank")%></p>
 </div>
 <br/>
 

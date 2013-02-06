@@ -1,0 +1,90 @@
+<%= form_for(@site) do |f| %>
+  <% if @site.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
+
+      <ul>
+      <% @site.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class ="span3">
+  <h2> About Page </h2>
+  <div class="field">
+    <%= f.label :about_photo %>
+    <% unless @site.about_photo.url == "/about_photos/original/missing.png"%>
+      <%= image_tag(@site.about_photo.url)%>
+    <% end %>
+    <%= f.file_field :about_photo %>
+  </div>
+  <div class="field">
+    <%= f.label :about %>
+    <%= f.text_area :about %>
+  </div>
+  <br/>
+</div>
+
+<div class = "span3">
+	<h2> Services Page </h2>
+	  <div class="field">
+	    <%= f.label :services_photo %>
+	    <% unless @site.services_photo.url == "/services_photos/original/missing.png"%>
+	      <%= image_tag(@site.services_photo.url)%>
+	    <% end %>
+	    <%= f.file_field :services_photo %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :services %>
+	    <%= f.text_area :services %>
+	  </div>
+	<h2> Home Page </h2>
+	  <div class="field">
+	    <%= f.label :home_photo %>
+	    <% unless @site.home_photo.url == "/home_photos/original/missing.png"%>
+	      <%= image_tag(@site.home_photo.url)%>
+	    <% end %>
+	    <%= f.file_field :home_photo %>
+	  </div>
+</div>
+
+<div class="span3">
+	<h2> Contact Page </h2>
+	<div class="field">
+	    <%= f.label :contact_photo %>
+	    <% unless @site.contact_photo.url == "/contact_photos/original/missing.png"%>
+	      <%= image_tag(@site.contact_photo.url)%>
+	    <% end %>
+	    <%= f.file_field :contact_photo %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :address1 %>
+	    <%= f.text_field :address1 %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :address2 %>
+	    <%= f.text_field :address2 %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :telephone %>
+	    <%= f.text_field :telephone %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :fax %>
+	    <%= f.text_field :fax %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :email %>
+	    <%= f.text_field :email %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :map_url %>
+	    <%= f.text_field :map_url %>
+	  </div>
+	  <div class="actions" style="text-align:center;">
+	    <%= f.submit %>
+	  </div>
+</div>
+<% end %>
