@@ -1,4 +1,7 @@
 Riverside::Application.routes.draw do
+  resources :sites
+
+
   resources :projects
   resources :sessions
   
