@@ -12,21 +12,23 @@
 	  </ul>
     </div>	
 
-    <div class="span8 pull-right right-thumbs" style="">	
-	  <div class="row pull-right">
-		
-		<% @projects.each do |project| %>
-	      <% if project.project_photos.count > 0 %>
-		    <div class = "thumb pull-left">
-		      <%= link_to(image_tag( project.project_photos.first.photo.url(:thumb), class:"thumb#{project.id}"), project) %>
-		    </div>
+    <div class="span6 pull-right right-thumbs" style="">
+	  <% @projects.each_slice(3) do |slice| %>	
+	    <div class="row-fluid pull-right">
+		  <% slice.each do |project| %>
+	        <% if project.project_photos.count > 0 %>
+		      <div class = "span4 thumb pull-left"> 
+		        <%= link_to(image_tag( project.project_photos.first.photo.url(:thumb), class:"thumb#{project.id}"), project) %>
+		      </div>
+	        <% end %>
 	      <% end %>
-	    <% end %>
+	    </div>
+	  <% end %>
 	  </div>
 	</div>	
 </div>
 
-</div>
+
 	   
 	    <!-- <div class="span3">
 	  		  <div class = "thumb">
