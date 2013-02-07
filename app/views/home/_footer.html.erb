@@ -1,3 +1,30 @@
 <div class = "footer">
-    <div style="padding-top:10px;"><p style="text-align:center; color:white;">GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040</p>
+	
+	
+    <% case content %>
+    <% when "index"%>
+      <div style="padding-top:10px;">
+	    <p style="text-align:center; color:white;">
+		GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+		</p>
+	  </div>
+    <% when "about"%>
+      <% if admin? %>
+        <div class="footer-links" style="padding-left:5%;">
+          <%=link_to "edit site info", edit_site_path(@site) %>
+        </div>
+      <% end %>
+    <% when "services"%>
+   	  <% if admin? %>
+        <div class="footer-links" style="padding-left:5%;">
+          <%=link_to "edit site info", edit_site_path(@site) %>
+        </div>
+      <% end %>
+     <% when "contact"%>
+   	  <% if admin? %>
+        <div class="footer-links" style="padding-left:5%;">
+          <%=link_to "edit site info", edit_site_path(@site) %>
+        </div>
+      <% end %>
+     <% end %> 
 </div>
