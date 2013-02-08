@@ -7,7 +7,7 @@
     <div class="span4" style="">
 	  <ul class="left-tabs">
 		<% @projects.each do |project| %>
-		<li><%=link_to "#{project.name.upcase}", project, class: "pro#{project.id}" %></li><br/>
+		<li><%=link_to "#{project.name.upcase}", project, class: "pro#{project.id}", :"data-target" => project.id %></li><br/>
 	   <% end %>	
 	  </ul>
     </div>	
@@ -18,7 +18,7 @@
 		  <% slice.each do |project| %>
 	        <% if project.project_photos.count > 0 %>
 		      <div class = "span4 thumb pull-left"> 
-		        <%= link_to(image_tag( project.project_photos.first.photo.url(:thumb), class:"thumb#{project.id}"), project) %>
+		        <%= link_to(image_tag( project.project_photos.first.photo.url(:thumb), class:"thumb#{project.id}", :"data-target" => project.id), project) %>
 		      </div>
 	        <% end %>
 	      <% end %>
