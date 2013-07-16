@@ -15,7 +15,7 @@ end
 gem 'aws-sdk'
 
 gem 'bootstrap-sass'
-gem "paperclip", "~> 3.0"
+gem "paperclip", "~> 3.4.2"
 
 # Gems used only for assets and not required
 # in production environments by default.
