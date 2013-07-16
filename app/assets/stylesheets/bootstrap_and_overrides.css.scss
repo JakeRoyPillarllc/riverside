@@ -1,2 +1,10 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
+
+@media (max-width: 979px) {
+
+  .navbar .brand {
+    margin-top: -25px;
+    margin-left: -20px;
+  }
+}
