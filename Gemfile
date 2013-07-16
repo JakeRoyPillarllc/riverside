@@ -12,6 +12,8 @@ end
      gem 'sqlite3'
  end
 
+gem 'aws-sdk'
+
 gem 'bootstrap-sass'
 gem "paperclip", "~> 3.0"
 
