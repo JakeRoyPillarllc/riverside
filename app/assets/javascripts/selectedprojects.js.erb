@@ -2,6 +2,7 @@
     $(function(){
 
 	 $("ul.left-tabs a").hover(function(){
+            $(this).css("color","white");
 		 			  var t = $(this).attr('data-target');
 		              var sel = ".thumb" + t;
 		 			  $(sel).css("opacity","1.0");},
@@ -9,6 +10,7 @@
 			          var t = $(this).attr('data-target');
 			          var sel = ".thumb" + t;
 			          $(sel).css("opacity","0.6");
+                $(this).css("color","grey");
 		 		    });
 		
 	$(".right-thumbs img").hover(function(){
