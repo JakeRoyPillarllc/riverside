@@ -26,5 +26,11 @@
           <%=link_to "edit site info", edit_site_path(@site) %>
         </div>
       <% end %>
+      <% when "projects"%>
+      <% if admin? %>
+        <div class="footer-links" style="padding-left:5%;">
+          <%=link_to "add new project", new_project_path %>
+        </div>
+      <% end %>
      <% end %> 
 </div>

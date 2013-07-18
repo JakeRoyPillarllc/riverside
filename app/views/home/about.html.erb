@@ -6,3 +6,9 @@
     <%= @site.about.html_safe %>
   </div>
 
+<script>
+  $('.background-image').load(function(){
+	  	  setContentHeightToImageHeight();
+	  	  setContainerWidthToImageWidth();
+  });
+</script>

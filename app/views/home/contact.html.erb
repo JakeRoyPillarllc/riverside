@@ -17,4 +17,9 @@ F: <%= @site.fax %></p>
 <p><%= link_to("Map", @site.map_url, class: "no-bg-link", target: "_blank")%></p>
 </div>
 <br/>
-
+<script>
+  $('.background-image').load(function(){
+	  	  setContentHeightToImageHeight();
+	  	  setContainerWidthToImageWidth();
+  });
+</script>
