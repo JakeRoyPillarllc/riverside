@@ -11,8 +11,8 @@
 <%= @site.address2 %></p>
 <br/>
 <p>T: <%= @site.telephone %><br/>
-F: <%= @site.fax %></p>
-<br/>
+<!-- F: <%= @site.fax %></p>
+<br/> -->
 <p><%= link_to(@site.email, "mailto:#{@site.email}", class: "no-bg-link", target: "_blank")%></p>
 <p><%= link_to("Map", @site.map_url, class: "no-bg-link", target: "_blank")%></p>
 </div>
