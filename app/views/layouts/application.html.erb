@@ -15,7 +15,7 @@
       <div class="content">
         <%= yield %>
       </div>
-      <%= render "home/footer", :content => @footercontent %>
+      <%= render "home/footer", :content => @footercontent unless @no_footer %>
   </div>
 </body>
 
