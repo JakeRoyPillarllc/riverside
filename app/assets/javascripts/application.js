@@ -15,20 +15,20 @@
 //= require bootstrap
 //= require_tree .
 
-// $(window).load(function() {
-//   $(".infobar").css("height", $(".content").height()-100);
-// });
+$(window).load(function() {
+  $(".infobar").css("height", $(".content").height()-100);
+});
 
 
 
-// ch = $(".content").height();
-// $(window).resize(function(){
+ch = $(".content").height();
+$(window).resize(function(){
 	
-// 	if (ch != $(".content").height()){
-// 		$(".infobar").css("height", $(".content").height()-100);
-// 	}
+	if (ch != $(".content").height()){
+		$(".infobar").css("height", $(".content").height()-100);
+	}
 
-// });
+});
 
 
   function setContainerHeightToWindowHeight(){

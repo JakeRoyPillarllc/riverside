@@ -29,6 +29,7 @@ body{
   height:100%;
   width:100% !important;
   position:relative;
+  min-width: 875px;
   //min-width:800px;
 }
 
@@ -50,7 +51,7 @@ body{
 }
 
 #project-infobar{
-  height:100%;
+  height:inherit;
   top:80px;
   width:250px;
   background:white; 
@@ -85,8 +86,9 @@ body {
 
 .content{
 	background-color:black;
+  //max-height:85%;
 //	min-width:800px;
-	min-height:700px;
+	//min-height:700px;
 }
 
 .footer{
