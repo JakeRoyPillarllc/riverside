@@ -13,11 +13,23 @@
         <div class="footer-links" style="padding-left:5%;">
           <%=link_to "edit site info", edit_site_path(@site) %>
         </div>
+      <% else %>
+        <div style="padding-top:10px;">
+          <p style="text-align:center; color:white;">
+          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+         </p>
+        </div>
       <% end %>
     <% when "services"%>
    	  <% if admin? %>
         <div class="footer-links" style="padding-left:5%;">
           <%=link_to "edit site info", edit_site_path(@site) %>
+        </div>
+      <% else %>
+        <div style="padding-top:10px;">
+          <p style="text-align:center; color:white;">
+          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+         </p>
         </div>
       <% end %>
      <% when "contact"%>
@@ -25,11 +37,23 @@
         <div class="footer-links" style="padding-left:5%;">
           <%=link_to "edit site info", edit_site_path(@site) %>
         </div>
+      <% else %>
+        <div style="padding-top:10px;">
+          <p style="text-align:center; color:white;">
+          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+         </p>
+        </div>
       <% end %>
       <% when "projects"%>
       <% if admin? %>
         <div class="footer-links" style="padding-left:5%;">
           <%=link_to "add new project", new_project_path %>
+        </div>
+      <% else %>
+        <div style="padding-top:10px;">
+          <p style="text-align:center; color:white;">
+          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+         </p>
         </div>
       <% end %>
      <% end %> 
