@@ -171,6 +171,15 @@ ul a:hover {
   background:transparent;
 }
 
+.flexslider{
+  margin:0 !important;
+  border:0 !important;
+}
+
+a.flex-next, a.flex-prev{
+  background-color: transparent !important;  
+  font-size: 50pt;
+}
 
 .carousel{
   margin-bottom:0 !important;

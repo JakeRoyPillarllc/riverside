@@ -1,5 +1,20 @@
 <div id = "everything" style="overflow:hidden;">
-<div id="myCarousel" class="carousel slide">
+
+<!-- <ul class="rslides">
+  <% @project.project_photos.each_with_index do |pp, index| %>
+    <li><%= image_tag(pp.photo.url, :title => pp.caption)%></li>
+  <%end%>
+</ul> -->
+
+
+<div class="flexslider">
+  <ul class="slides">
+    <% @project.project_photos.each_with_index do |pp, index| %>
+      <li><%= image_tag(pp.photo.url, :title => pp.caption)%></li>
+    <%end%>
+  </ul>
+</div>
+<!-- <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
 	<% @project.project_photos.each_with_index do |pp, index| %>
 	  <% if index == 0 %>
@@ -14,7 +29,7 @@
   </div>
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div><!-- /.carousel -->
+</div> -->
 
 <div id ="project-infobar" style="display:none">
     <p><%= @project.info %></p>
@@ -102,6 +117,14 @@
 	$('.carousel').carousel({
 		interval: false
 	});
+
+	$('.flexslider').flexslider({
+      animation: "slide",
+      controlNav: false,
+      prevText: "‹",           //String: Set the text for the "previous" directionNav item
+      nextText: "›", 
+    });
+
 	$("#prev").click(function(){
 		$('.carousel').carousel('prev');
 	});
