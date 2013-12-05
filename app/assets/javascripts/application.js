@@ -15,11 +15,10 @@
 //= require bootstrap
 //= require_tree .
 
+
 $(window).load(function() {
   $(".infobar").css("height", $(".content").height()-100);
 });
-
-
 
 ch = $(".content").height();
 $(window).resize(function(){

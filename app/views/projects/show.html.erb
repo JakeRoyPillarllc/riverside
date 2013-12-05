@@ -75,6 +75,16 @@
 <script>
   !function ($) {
     $(function(){
+
+    setTimeout(function(){$("#project-infobar").css("height", $(".content").height()-100);},500);
+    ch = $(".content").height();
+    $(window).resize(function(){	
+	  if (ch != $(".content").height()){
+		$("#project-infobar").css("height", $(".content").height()-100);
+	  }
+	});
+
+	  
       // carousel demo
 
     var cnt = 0 
@@ -95,14 +105,18 @@
 		cnt++;
 				
 		if (cnt%2 == 0){
-			 $("#project-infobar").animate({top: document.height}, 600, function() {
-			 			    $("#project-infobar").css("display", "none");
-			 			  });	
+			$("#project-infobar").hide();
+			return false;
+			 // $("#project-infobar").animate({top: document.height}, 600, function() {
+			 // 			    $("#project-infobar").css("display", "none");
+			 // 			  });	
 		}
 		else	
-			$("#project-infobar").css("display","block");
-			$("#project-infobar").css("top",document.height);
-			$("#project-infobar").animate({top: '100'}, 600);
+			$("#project-infobar").show();
+		return false;
+			// $("#project-infobar").css("display","block");
+			// $("#project-infobar").css("top",document.height);
+			//$("#project-infobar").animate({top: '100'}, 600);
 		
     });
 	
@@ -131,6 +145,8 @@
 	$("#next").click(function(){
 		$('.carousel').carousel('next');
 	});
+	  
+
 	
 	
 });
