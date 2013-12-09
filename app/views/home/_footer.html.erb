@@ -1,11 +1,10 @@
-<div class = "footer">
-	
+<div class = "footer"
 	
     <% case content %>
     <% when "index"%>
       <div style="padding-top:10px;">
 	    <p style="text-align:center; color:white;">
-		GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+		GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp; <%= link_to("900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;".html_safe,@site.map_url, :class => 'footer-address', :target => "_blank") %>     T: 212.614.3040
 		</p>
 	  </div>
     <% when "about"%>
@@ -16,7 +15,7 @@
       <% else %>
         <div style="padding-top:10px;">
           <p style="text-align:center; color:white;">
-          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp; <%= link_to("900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;".html_safe,@site.map_url, :class => 'footer-address', :target => "_blank")%>  T: 212.614.3040
          </p>
         </div>
       <% end %>
@@ -28,7 +27,7 @@
       <% else %>
         <div style="padding-top:10px;">
           <p style="text-align:center; color:white;">
-          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   <%= link_to("900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;".html_safe,@site.map_url, :class => 'footer-address', :target => "_blank")%>   T: 212.614.3040
          </p>
         </div>
       <% end %>
@@ -40,7 +39,7 @@
       <% else %>
         <div style="padding-top:10px;">
           <p style="text-align:center; color:white;">
-          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;  <%= link_to("900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;".html_safe,@site.map_url, :class => 'footer-address', :target => "_blank")%>  T: 212.614.3040
          </p>
         </div>
       <% end %>
@@ -52,7 +51,7 @@
       <% else %>
         <div style="padding-top:10px;">
           <p style="text-align:center; color:white;">
-          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;   900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;   T: 212.614.3040
+          GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;  <%= link_to("900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;".html_safe,@site.map_url, :class => 'footer-address', :target => "_blank")%>   T: 212.614.3040
          </p>
         </div>
       <% end %>
