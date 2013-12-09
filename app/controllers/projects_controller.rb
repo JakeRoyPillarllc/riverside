@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
+    @site = Site.first
     @projects = Project.all
     @footercontent = 'projects'
 
