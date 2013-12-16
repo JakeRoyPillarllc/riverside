@@ -1,4 +1,4 @@
-<div class = "footer"
+<div class = "footer">
 	
     <% case content %>
     <% when "index"%>
@@ -44,16 +44,32 @@
         </div>
       <% end %>
       <% when "projects"%>
-      <% if admin? %>
-        <div class="footer-links" style="padding-left:5%;">
+        <% if admin? %>
+          <div class="footer-links" style="padding-left:5%;">
           <%=link_to "add new project", new_project_path %>
-        </div>
-      <% else %>
-        <div style="padding-top:10px;">
-          <p style="text-align:center; color:white;">
+          </div>
+        <% else %>
+          <div style="padding-top:10px;">
+            <p style="text-align:center; color:white;">
           GENERAL CONTRACTING & CONSTRUCTION MANAGEMENT &nbsp;&nbsp;&nbsp;  <%= link_to("900 BROADWAY, SUITE 802 &nbsp;  NEW YORK, NY 10003 &nbsp;&nbsp;&nbsp;".html_safe,@site.map_url, :class => 'footer-address', :target => "_blank")%>   T: 212.614.3040
          </p>
         </div>
-      <% end %>
+        <% end %>
+      <% when "project"%>
+        <div class="footer-links">
+          <div class ="span3 footerspan">
+            <a id= "info" style="font-size:10pt;" href="#"> PROJECT INFO </a>
+          </div>
+          <div class = "span3 footerspan">
+            <% if admin? %>
+              <%= link_to 'edit', edit_project_path(@project) %> &nbsp;&nbsp;
+              <%= link_to 'delete', @project, :confirm => "Are you sure you want to delete this project? This project will be permanently deleted. You can not un-do this action.", :method => :delete %> &nbsp;&nbsp;
+              <%= link_to 'new', new_project_path() %>
+            <% end %>
+          </div>
+          <div class = "span3 footerspan" style="text-align:right; font-size:10gpt;">
+            <%= @project.name.upcase %> 
+          </div>
+        </div>
      <% end %> 
 </div>

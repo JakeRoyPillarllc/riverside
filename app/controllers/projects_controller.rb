@@ -18,7 +18,8 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project = Project.find(params[:id])
-    @no_footer = true
+    #@no_footer = true
+    @footercontent = 'project'
 
     respond_to do |format|
       format.html # show.html.erb

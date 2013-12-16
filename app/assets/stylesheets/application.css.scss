@@ -26,12 +26,17 @@ body{
   overflow-y:hidden;
 }
 
+.img-container{
+  overflow:hidden;
+}
+
 .container.everything{
   height:100%;
   width:100% !important;
   position:relative;
   min-width: 875px;
   background-color:#3c3c3c;
+  //z-index:-9999;
   //min-width:800px;
 }
 
@@ -88,6 +93,7 @@ body {
 
 .content{
 	background-color:black;
+  overflow:hidden;
   //max-height:85%;
 //	min-width:800px;
 	//min-height:700px;
@@ -122,6 +128,14 @@ body {
     font-size:14pt;
     text-decoration:none;
     color:white;
+}
+
+#sticky-footer{
+  height: 50px;
+  background-color:red;
+  color:white;
+  z-index:999;
+  position:relative !important;
 }
 
 .field{

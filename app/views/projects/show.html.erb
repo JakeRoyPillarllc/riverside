@@ -1,4 +1,3 @@
-<div id = "everything" style="overflow:hidden;">
 
 <!-- <ul class="rslides">
   <% @project.project_photos.each_with_index do |pp, index| %>
@@ -10,7 +9,7 @@
 <div class="flexslider">
   <ul class="slides">
     <% @project.project_photos.each_with_index do |pp, index| %>
-      <li><%= image_tag(pp.photo.url, :title => pp.caption)%></li>
+      <li><%= image_tag(pp.photo.url, :title => pp.caption, :class => "background-image")%></li>
     <%end%>
   </ul>
 </div>
@@ -39,8 +38,8 @@
   <a class="exit" href="#">CLOSE x</a>
 </div>
 
-<div class = "footer">
-  <div class="footer-links">
+<!-- <div class = "footer">
+   <div class="footer-links">
 	<div class ="span3 footerspan">
 		<a id= "info" style="font-size:10pt;" href="#"> PROJECT INFO </a>
 	</div>
@@ -54,22 +53,9 @@
 	<div class = "span3 footerspan" style="text-align:right; font-size:10gpt;">
 	  <%= @project.name.upcase %>	
 	</div>
-	<!-- <div class = "span3 footerspan pull-right">
-		<a id="prev" href="#"> < </a>
-		   &nbsp;&nbsp;&nbsp;&nbsp;
-		<a id="next" href="#"> > </a>
-	</div> -->
-    <!-- <a id= "info" style="font-size:10pt;" href="#"> PROJECT INFO </a>
-    	<span style="margin-left:50%;"><%= @project.name.upcase %></span>
-    	<span style="margin-left:23%;"> 
-    		<a id="prev" href="#"> < </a>
-    		   &nbsp;&nbsp;&nbsp;&nbsp;
-    		<a id="next" href="#"> > </a> 
-    	</span> -->
-	
-   </div>
-</div>
-</div>
+   </div> 
+</div> -->
+
 
 
 <script>

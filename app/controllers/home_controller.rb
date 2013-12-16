@@ -7,8 +7,6 @@ class HomeController < ApplicationController
   def about
     @site = Site.first
     @footercontent = "about"
-    
-    
   end
   
   def contact
