@@ -86,6 +86,8 @@ body {
   height: 100%;
 }
 
+
+
 .header{
   height:80px;
   background-color:rgb(60, 60, 60);
@@ -201,6 +203,7 @@ ul a:hover {
 .flexslider{
   margin:0 !important;
   border:0 !important;
+  cursor:pointer;
 }
 
 a.flex-next, a.flex-prev{

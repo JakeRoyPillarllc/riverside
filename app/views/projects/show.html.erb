@@ -123,8 +123,14 @@
       controlNav: false,
       prevText: "‹",           //String: Set the text for the "previous" directionNav item
       nextText: "›",
-      slideshow: false 
-    });
+      slideshow: false ,
+      start: function(slider) {
+        $('.slides li img').click(function(event){
+          event.preventDefault();
+          slider.flexAnimate(slider.getTarget("next"));
+        });
+      }
+      });
 
 	$("#prev").click(function(){
 		$('.carousel').carousel('prev');
