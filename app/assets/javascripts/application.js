@@ -26,6 +26,7 @@ $(window).load(function() {
 		console.log('hi');
 	 	var h = $(window).height() - 120;
 	 	$(".content").css("height", h);
+	 	$(".infobar").css("height", $(".content").height()-100);
 	 	// $(".footer").css("position","absolute");
 	 	// $(".footer").css("bottom","0");
     }
@@ -57,6 +58,7 @@ $(window).load(function() {
 
 ch = $(".content").height();
 var everything_height = ch + 80 + 40;
+
 $(window).resize(function(){
 	// var h = $(window).height() - 120
 	// 	$(".content").css("height", h);
@@ -87,8 +89,10 @@ $(window).resize(function(){
 	if (ch != $(".content").height()){
 		$(".infobar").css("height", $(".content").height()-100);
 	}
-
-		
+setTimeout(function(){
+  $(".infobar").css("height", $(".content").height()-100);
+  $("#project-infobar").css("height", $(".content").height()-100);
+},200);		
 });
 
 
